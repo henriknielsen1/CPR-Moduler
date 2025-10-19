@@ -31,6 +31,31 @@
             background-color: var(--color-white);
             padding: 2rem;
             border: 1px solid #e0e0e0;
+            position: relative;
+        }
+
+        .github-link {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--color-medium-grey);
+            font-weight: 700;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+
+        .github-link:hover {
+            color: var(--color-red);
+        }
+
+        .github-link svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            fill: currentColor;
         }
 
         header {
@@ -181,20 +206,6 @@
             transform: scale(1.02);
         }
 
-        .loader {
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid var(--color-red);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
         /* Modal Styles */
         .modal {
             display: none;
@@ -239,6 +250,12 @@
 <body>
 
     <div class="container">
+        <a href="https://github.com/DIT-BRUGERNAVN/DIT-REPOSITORY" target="_blank" class="github-link">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub icon">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+            </svg>
+            <span>Se på GitHub</span>
+        </a>
         <header>
             <h1>Cyberpunk RED Adventure Modul</h1>
             <h2>Aktion 1: Eftersynet & Presset (Revideret)</h2>
@@ -250,7 +267,6 @@
                  <div class="read-aloud">
                     <strong>Læs højt for spillerne:</strong>
                     <p>Velkommen til Night City - stedet, hvor drømme går hen for at dø, og hvor neonlysene kun lige dækker over byens affald. Her, mellem den kaotiske Combat Zone og den lidt mere "civiliserede" Upper Marina, ligger jeres hjem: et solidt, men godt brugt lejlighedskompleks, lokalt kendt som The Block.</p>
-                    <p>Kvarteret er et "One Block" område - hvilket vil sige, at I kun er én blok fra total anarki. Lige i midten befinder I jer, i en gråzone af smadrede neonskilte, små snuskede butikker og en vag fornemmelse af, at hvis man bare ignorerer problemerne, går de måske væk af sig selv. Det handler bare om at overleve - og måske, hvis du er heldig, få lov at gøre en forskel. Men pas på: Selv de mest uskyldige ting har en beskidt bagside her. Selv et sted som The Block.</p>
                  </div>
                 <div class="gm-note">
                     <strong>Pacing:</strong>
@@ -261,89 +277,108 @@
             <section id="scene1">
                 <h3>SCENE 1.0: STILHED EFTER STORMEN</h3>
                 <p>
-                    Modulet starter timer efter ildkampen. Gangen på tredje sal er et slagteri. Lugten af krudt, blod og brændt krom hænger i luften. Midt i det hele kører bygningens gamle "Sanitron"-rengøringsdrone i cirkler med en defekt skviser, der kun tværer de blodige striber længere ud over gulvet. Det er en grotesk, næsten komisk scene.
+                    Modulet starter timer efter ildkampen. Gangen på tredje sal er et slagteri. Lugten af krudt, blod og brændt krom hænger i luften. Midt i det hele kører bygningens gamle "Sanitron"-rengøringsdrone i cirkler med en defekt skviser, der kun tværer de blodige striber længere ud over gulvet.
                 </p>
                 <div class="image-placeholder" id="image-chaos">
                      
                 </div>
-                <div class="gm-note">
-                    <strong>GM-Note:</strong>
-                    <p>Dette er jeres nye "normal". Lad spillerne tage scenen ind. De er sårede, adrenalinen er væk, og nu står de med rodet. De overlevende naboer kommer forsigtigt ud.</p>
-                </div>
                 
-                <h4>Samtaler i Kaosset</h4>
-                <ul>
-                    <li><strong>Dr. George Carver (Ripperdoc):</strong> Han er panisk. "I skal af med ligene! Og deres udstyr! WorldSat chipper alt deres grej. De kan spore det hertil!" Hans virkelige frygt er de stjålne WorldSat-forsyninger i hans lejlighed.</li>
-                    <li><strong>Gina Zepada (Aktivist):</strong> Hun er rasende. "Dette er, hvad der sker, når man taler med kugler! Nu kommer de efter os alle sammen." Hun frygter for sine sjældne, naturlige dyr.</li>
-                    <li><strong>Rico Robinson (Rockerboy):</strong> Han afspiller et forvrænget lydklip, han optog under kampen. Med en <strong>Perception (DV 13)</strong> kan man høre en dæmpet stemme sige: <em>"...Rex bekræftede... hullet er lukket... J-Loup er betalt."</em> Dette er det første spor.</li>
-                    <li><strong>Molly Anderson (Fixer):</strong> Hun kigger koldt på rodet. "Amatører," mumler hun. "De sendte B-holdet. Det betyder, at de enten undervurderer os, eller at dette kun var en test." Hun er mistroisk og foreslår at bruge hendes kontakter til at finde ud af, hvorfor WorldSat er så aggressive.</li>
-                </ul>
-
                 <h4>Hovedbegivenhed: Mediernes Angreb</h4>
                 <p>
-                    En time senere ankommer en bil fra <strong>WorldSat Media Division</strong>. Media'en **Vivian "Viper" Holm** vil skabe narrativet: "Voldelige anarkister besætter faldefærdig bygning."
+                    En time senere ankommer en bil fra <strong>WorldSat Media Division</strong>. Media'en **Vivian "Viper" Holm** vil skabe narrativet. Hun er en opportunist, der spiller på den hest, hun tror, vinder. Den nemme vinkel er "voldelige beboere", men hvis spillerne kan overbevise hende om en større konspiration, er det en historie, der kan gøre hende berømt.
                 </p>
                 <div class="image-placeholder" id="image-vivian">
                      
                 </div>
-                <p>
-                    Vivian vil forsøge at provokere spillerne med ledende spørgsmål som: "Så I mener, det er jeres ret at dræbe folk for at beskytte jeres 'hjem'?" Hendes kameramand filmer bevidst skudhuller og bange naboer.
-                </p>
                 <div class="regel-hjaelp">
-                    <strong>Regelhjælp & Social Kamp:</strong>
+                    <strong>Social Kamp: Tre Udfald</strong>
+                    <p>At gennemskue hendes agenda kræver <strong>Human Perception (DV 14)</strong>.</p>
                     <ul>
-                        <li>At gennemskue hendes agenda kræver <strong>Human Perception (DV 14)</strong>.</li>
-                        <li>At modargumentere kræver en vellykket <strong>Persuasion (DV 15)</strong> for at få hende til at se dårlig ud på sit eget feed.</li>
-                        <li>At true hende væk (<strong>Intimidation DV 15</strong>) vil give hende præcis de billeder, hun ønsker.</li>
+                        <li><strong>A) INTIMIDATION (DV 15) - "Trusler":</strong> Spillerne truer hende væk. <strong>Konsekvens:</strong> Næste morgen kører WorldSat klip af truslerne. NCPD sender "Wellness Check" patruljer til The Block. Alle sociale checks i kvarteret får +2 DV.</li>
+                        <li><strong>B) PERSUASION (DV 15) - "Vi Vender Narrativet":</strong> Spillerne overbeviser hende om, at den *rigtige* historie er "WorldSat angriber uskyldige". Kræver et bevis (f.eks. Ricos lydklip). <strong>Konsekvens:</strong> Vivian bliver en ustabil allieret og giver dem én "favør": Adgang til en intern kalender, der afslører J-Loups møde i Bymidte Arkiv.</li>
+                        <li><strong>C) IGNORER HENDE - "Vi Taler Ikke med Pressen":</strong> Spillerne lukker døren. <strong>Konsekvens:</strong> Hun interviewer de andre naboer og kører en moderat negativ historie. En korrupt betjent kræver 500eb i bestikkelse.</li>
                     </ul>
                 </div>
             </section>
 
+            <section id="scene1-5">
+                <h3>SCENE 1.5: SKÆNDERIET</h3>
+                <div class="read-aloud">
+                    <strong>Læs højt for spillerne:</strong>
+                    <p>Tilbage i lobbyen har naboerne samlet sig. Der er ikke nogen enighed mere. Dr. Carver står med korslagte arme, Gina gestikulerer vredt, Rico livestreamer fra sin telefon, og Molly... Molly sidder bare og ser jer an. 'Så,' siger hun koldt, 'hvad gør I nu, helte?'</p>
+                </div>
+                <p>Spillerne skal nu navigere i naboernes modstridende krav for at sikre sig deres hjælp.</p>
+                 <ul>
+                    <li><strong>Dr. George Carver (Panisk & Selvisk):</strong> Tilbyder gratis behandling (værdi 500eb pr. spiller) og 2x Speedheal, hvis de fjerner ALT WorldSat-mærket udstyr og aldrig nævner ham.</li>
+                    <li><strong>Gina Zepada (Idealist & Moraliserende):</strong> Kræver, at de løser det UDEN mere vold. Hvis de lover det, giver hun kontakt til et aktivist-netværk. Brydes løftet, får de -3 Reputation.</li>
+                    <li><strong>Rico Robinson (Klout-Chaser):</strong> Vil udgive sine lydklip og billeder NU for at gå viralt. Spillerne må stoppe ham (Persuasion/Intimidation DV 14) for at undgå, at WorldSat sender en "Cleaner" efter alle involverede.</li>
+                    <li><strong>Molly Anderson (Kold & Strategisk):</strong> Etablerer sig som deres nye Fixer. Hun tilbyder beskyttelse og en kontakt hos NCPD, men kræver, at de tager et job for hende: Find ud af, *hvad* WorldSat *virkelig* leder efter i The Block. Hun betaler 1000eb pr. person for informationen.</li>
+                </ul>
+            </section>
+
             <section id="scene2">
                 <h3>SCENE 2.0: FIXERENS FORSVINDINGSNUMMER</h3>
+                <div class="gm-note">
+                    <strong>GM-Note:</strong>
+                    <p>Efter "Skænderiet" er det oplagte næste skridt at konfrontere den fraværende Fixer, Rex. Molly kan direkte sige: "Og hvad med Rex? Ham, der skulle beskytte os? Han er tavs. Find ud af hvorfor."</p>
+                </div>
                 <p>
-                    Uanset hvordan mødet med medierne går, står én ting klart: Deres Fixer, <strong>Rex</strong>, er forsvundet. Hans lejlighed er låst og tømt. En <strong>Perception (DV 14)</strong> afslører en løs gulvplanke under skrivebordet. Herunder ligger en datapad.
+                    Rex's lejlighed på fjerde sal er stille og forseglet.
                 </p>
-                
+                 <div class="read-aloud">
+                    <strong>Læs højt, når de kommer ind:</strong>
+                    <p>Da I bryder ind i Rex' lejlighed, sidder der nogen i sofaen. En teenager med neonblåt hår og et gammelt cyberdeck tapet til hendes arm. 'Endelig,' siger hun. 'Jeg har ventet på, at nogen skulle komme. Rex... han er ikke den, I tror han er.'</p>
+                </div>
+                <p>Dette er **Maya**, Ricos lillesøster (og hemmelig netrunner-wannabe). Hun afslører, at Rex fik trusler for 3 uger siden: "De kidnappede hans kone, Carmen." Hun fandt hans "panik-cache" under gulvplanken: datapad'en + et billede af Carmen med dags dato og en besked: "Cooperate or she dies."</p>
+
                 <h4>Datapad'en: Den Rygende Pistol</h4>
                  <div class="image-placeholder" id="image-datapad">
                      
                 </div>
-                <p>Datapad'en er krypteret. Gruppen har de sædvanlige tre måder at åbne den på (Hacking, Tech, eller betale en ekspert).</p>
-                 <div class="gm-note">
-                    <strong>Hvad sporet betyder:</strong>
-                    <p>Indholdet er en krypteret faktura fra en "J-Loup" til Rex for "Konsulentbistand vedr. annullering af servitut, Dok. 701, Bymidte Arkiv." Betaling: 20.000eb. Rex har solgt dem ud. Dette bekræfter Ricos lydklip. Sporet peger også på en dybere grund: Hvorfor er denne grund så vigtig? Måske er det ikke kun The Block, de er ude efter, men hele området til en hemmelig operation.</p>
-                </div>
+                <p>Datapad'en er krypteret (Hacking/Tech DV 14). Indholdet er en faktura fra "J-Loup" til Rex, der bekræfter forræderiet.</p>
             </section>
             
             <div class="twist">
-                <strong>TWIST: DEN TAVSE JÆGER</strong>
-                <p>I det øjeblik datapad'ens kryptering brydes, sendes et stille signal til WorldSat. De ved nu, at spillerne har beviset.</p>
-                <p>Sessionen slutter ikke roligt. Mens spillerne diskuterer deres næste træk, smadres en rude. En sortklædt skikkelse, udstyret med klatregrej og en lyddæmpet pistol, firer sig ned ad bygningen udenfor. Skikkelsen forsøger ikke at dræbe dem – kun at få fat i datapad'en. </p>
+                <strong>TWIST 2.0: GIDSELSITUATIONEN</strong>
+                <div class="read-aloud">
+                    <strong>Læs højt:</strong>
+                     <p>"Datapad'en er dekrypteret. I ser beviset. Men før I kan tage et åndedrag, EKSPLODERER vinduet. En flashbang ruller ind. Jeres ører ringer. Og gennem røgen ser I ham: En sort-klædt figur med et gidsel. Det er Maya."</p>
+                </div>
+                 <p>Cleaner'ens krav (via voice modulator): "Datapad'en. Nu. Eller pigen dør om 10 sekunder."</p>
                  <div class="image-placeholder" id="image-cleaner">
                      
                 </div>
-                <p>Dette er en "Cleaner". Deres job er at slette spor. Kampen er hurtig. Målet for "Cleaneren" er at undslippe, med eller uden datapad'en. </p>
+                <h4>Spillernes Muligheder</h4>
+                <ul>
+                    <li><strong>A) Overgiv datapad'en:</strong> Maya overlever, men de mister beviset (medmindre de har lavet en kopi - Basic Tech DV 13).</li>
+                    <li><strong>B) Forhandle (Persuasion DV 17 - SVÆR):</strong> "Vi giver dig en kopi. Du slipper pigen." Ved succes tager Cleaner'en kopien og forsvinder. Ved fiasko skyder han Maya i benet (4d6 skade), og kampen starter.</li>
+                    <li><strong>C) Angrib (Kamp):</strong> Cleaner'en bruger Maya som et menneskeligt skjold (-4 på angreb). Hans mål er at flygte via sit klatregrej.</li>
+                </ul>
+                <div class="gm-note">
+                    <strong>Efterspil:</strong> Hvis Maya dør, vil Rico aldrig hjælpe dem igen (-4 Reputation). Hvis hun overlever, er de helte (+2 Reputation).
+                </div>
+            </div>
+
+            <div class="twist">
+                <strong>TICKING CLOCK: 48 TIMER TIL UDSÆTTELSE</strong>
+                <p>Lige efter Cleaner-scenen, leverer Molly den dårlige nyhed: "Jeg har hørt rygter. WorldSat har indgivet en 'Emergency Condemnation Order' hos NCPD. Hvis den går igennem om 48 timer, bliver The Block lovligt ryddet. Vi taler bulldozers. Vi taler SWAT. Vi har to døgn."</p>
+                <p><strong>GM-Tip:</strong> Vis en nedtælling hver session. Ved 24 timer tilbage, begynder naboer at pakke. Ved 12 timer, kører bulldozerne fra depotet.</p>
+            </div>
+            
+             <div class="twist">
+                <strong>Andre Mulige Twists & Proaktive Muligheder</strong>
+                <ul>
+                    <li><strong>Den "døde" vagt:</strong> En af WorldSat-vagterne fra den første kamp var en deaktiveret cyborg, der nu genstarter med ordre om at "slette alle vidner".</li>
+                    <li><strong>Carvers hemmelighed:</strong> Dr. Carvers "forsyninger" er stjålne medicinske prototyper. Han er en forsker på flugt.</li>
+                     <li><strong>GM-Note for proaktive spillere:</strong> Opfordr dem til at køre en modkampagne mod Vivian, opsøge lokale bander for beskyttelse, eller kontakte NCPD som whistleblowers.</li>
+                </ul>
             </div>
 
             <section id="afslutning">
                 <h3>AFSLUTNING & HOOK TIL AKTION 2</h3>
                 <p>
-                    Modulet slutter med, at spillerne enten har sikret datapad'en eller lige akkurat har undgået, at den blev stjålet. De er ikke længere bare ofre; de er trusler. De har beviset i hånden, og de ved, at WorldSat ved, at de har det. Deres næste mission er ikke længere bare at forsvare sig. Det er et kapløb med tiden: Find J-Loup og få genaktiveret Dokument 701, før WorldSats "Cleaners" finder dem først.
+                    Modulet slutter med, at spillerne har beviset, en tikkende deadline, og en klar fjende, der ved, hvem de er. Deres næste mission er ikke længere bare at forsvare sig. Det er et kapløb med tiden: Find J-Loup og stop rydningsordren, før The Block bliver historie.
                 </p>
-            </section>
-
-            <section id="rewards">
-                <h3>BELØNNINGER</h3>
-                <div class="rewards">
-                    <h4>For "The Apartment" & Aktion 1</h4>
-                    <ul>
-                        <li><strong>Penge:</strong> I alt <strong>1000eb</strong> fra de oprindelige WorldSat-folk.</li>
-                        <li><strong>Udstyr:</strong> 4x Medium Assault Rifles og 4x Light Armorjack (SP11).</li>
-                        <li><strong>Tjeneste:</strong> Dr. Carver giver en gratis behandling (værdi op til 500eb) for at fjerne ligene.</li>
-                        <li><strong>Ry (Reputation):</strong> De slutter sessionen med <strong>Ry Niveau 3</strong>. De er kendt som "dem, der bider fra sig".</li>
-                    </ul>
-                </div>
             </section>
             
             <section id="npcs">
@@ -370,7 +405,7 @@
                         </tr>
                         <tr>
                             <td><strong>WorldSat "Cleaner"</strong></td>
-                            <td>Brug <strong>Solo</strong> pregen stats, men fokuser på Stealth (+7) og Athletics (+6). Udstyret med lyddæmpet Heavy Pistol og røggranater. Mål: Flygte, ikke kæmpe til døden.</td>
+                            <td><strong>REF 8, DEX 7, Athletics +8, Evasion +7, Handgun +9</strong> (silenced Heavy Pistol, 3d6), Martial Arts +7, SP 11, HP 40.</td>
                         </tr>
                     </tbody>
                 </table>
