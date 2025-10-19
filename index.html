@@ -403,6 +403,10 @@
                         const img = document.createElement('img');
                         img.src = imageInfo.src;
                         img.alt = imageInfo.alt;
+                        // Add error handling in case the image fails to load
+                        img.onerror = () => {
+                            placeholder.innerHTML = `<p style="color: var(--color-red);">Kunne ikke indlæse billede: ${imageInfo.src}</p>`;
+                        };
                         placeholder.appendChild(img);
                     }
                 });
@@ -416,7 +420,7 @@
             const closeModal = document.querySelector('.close-modal');
 
             document.querySelector('.container').addEventListener('click', (event) => {
-                if(event.target.tagName === 'IMG') {
+                if(event.target.tagName === 'IMG' && event.target.closest('.image-placeholder')) {
                     modal.style.display = "flex";
                     modalImg.src = event.target.src;
                 }
