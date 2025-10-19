@@ -1,13 +1,1277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CPR Moduler</title>
+    <title>Cyberpunk RED: Forræderiets Pris</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        h1 {
+            color: #d90429;
+            border-bottom: 3px solid #d90429;
+            padding-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #d90429;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-left: 5px solid #d90429;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #1a1a1a;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        h4 {
+            color: #666;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .mystery-box {
+            background: #f5f5f5;
+            border: 2px solid #d90429;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .mystery-box strong {
+            color: #d90429;
+        }
+
+        .read-aloud {
+            background: #e8f4f8;
+            border-left: 4px solid #0077b6;
+            padding: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .gm-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .clue {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .clue h4 {
+            color: #d90429;
+            margin-top: 0;
+        }
+
+        .check-info {
+            background: #e9ecef;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .obstacle {
+            background: #fff8e1;
+            border: 2px dashed #ff9800;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .npc {
+            background: #f1f3f4;
+            border-left: 4px solid #0077b6;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .npc h4 {
+            color: #0077b6;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #d90429;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .combat-stats {
+            background: #ffe6e6;
+            border: 2px solid #d90429;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        strong {
+            color: #d90429;
+        }
+
+        .page-break {
+            page-break-after: always;
+            margin: 50px 0;
+            border-bottom: 2px dashed #ccc;
+        }
+
+        @media print {
+            body { 
+                padding: 20px;
+                font-size: 11pt;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Media'en <strong>Vivian "Viper" Holm</strong></h1>
-    <p>Dette er <strong>Maya</strong></p>
-    <p>Find ud af, <strong>hvad</strong> WorldSat <strong>virkelig</strong></p>
+
+<h1>AKTION 1: FORRÆDERIETS PRIS</h1>
+
+<div class="mystery-box">
+    <h3>MYSTERY OVERVIEW</h3>
+    <p><strong>Goal:</strong> Identificer hvem der forrådte The Block til WorldSat, og hvorfor</p>
+    <p><strong>Complexity:</strong> 50 points (Average Mystery)</p>
+    <p><strong>Ticking Clock:</strong> 48 timer til WorldSat's Emergency Condemnation Order træder i kraft</p>
+</div>
+
+<h2>SCENE 1.0: STILHED EFTER STORMEN</h2>
+
+<div class="read-aloud">
+    <p><strong>Læs højt for spillerne:</strong></p>
+    <p>Velkommen til Night City - stedet, hvor drømme går hen for at dø, og hvor neonlysene kun lige dækker over byens affald. Her, mellem den kaotiske Combat Zone og den lidt mere "civiliserede" Upper Marina, ligger jeres hjem: et solidt, men godt brugt lejlighedskompleks, lokalt kendt som The Block.</p>
+    <p>Modulet starter timer efter ildkampen. Gangen på tredje sal er et slagteri. Lugten af krudt, blod og brændt krom hænger i luften. Midt i det hele kører bygningens gamle "Sanitron"-rengøringsdrone i cirkler med en defekt skviser, der kun tværer de blodige striber længere ud over gulvet.</p>
+</div>
+
+<div class="gm-note">
+    <strong>GM-Note:</strong> Dette er jeres nye "normal". Lad spillerne tage scenen ind. De er sårede, adrenalinen er væk, og nu står de med rodet. De overlevende naboer kommer forsigtigt ud.
+</div>
+
+<h3>Naboernes Første Reaktioner</h3>
+
+<div class="npc">
+    <h4>Dr. George Carver (Ripperdoc)</h4>
+    <p><strong>Første udmelding:</strong> "I skal af med ligene! Og deres udstyr! WorldSat chipper alt deres grej. De kan spore det hertil!"</p>
+    <p><strong>Virkelig frygt:</strong> Han har stjålne WorldSat-forsyninger (medicinsk udstyr til 5.000eb) i sin lejlighed.</p>
+    <p><strong>Tilbud:</strong> Gratis behandling (500eb værdi) hvis spillerne fjerner ligene diskret OG lover ikke at nævne hans "forsyninger".</p>
+</div>
+
+<div class="npc">
+    <h4>Gina Zepada (Aktivist)</h4>
+    <p><strong>Første udmelding:</strong> "Dette er, hvad der sker, når man taler med kugler! Nu kommer de efter os alle sammen."</p>
+    <p><strong>Frygt:</strong> Hendes sjældne, naturlige dyr (en hund, en kat, en papegøje) vil blive dræbt i næste angreb.</p>
+    <p><strong>Ultimatum:</strong> Spillerne skal love "ingen mere vold" eller hun kontakter NCPD. (Hun bluffer - Human Perception DV 13 afslører dette)</p>
+</div>
+
+<div class="npc">
+    <h4>Rico Robinson (Rockerboy)</h4>
+    <p><strong>Første udmelding:</strong> "Jeg fik det hele på lydoptagelse, choombas! Dette bliver VIRALT!"</p>
+    <p><strong>Vigtigt:</strong> Han har et forvrænget lydklip fra kampen (se Clue 1 nedenfor).</p>
+    <p><strong>Risiko:</strong> Han vil udgive ALT med det samme for kliks - medmindre spillerne stopper ham (Persuasion DV 14 eller bribe 200eb).</p>
+</div>
+
+<div class="npc">
+    <h4>Molly Anderson (Fixer)</h4>
+    <p><strong>Første udmelding:</strong> "Amatører. De sendte B-holdet. Det betyder, at de enten undervurderer os, eller at dette kun var en test."</p>
+    <p><strong>Tilbud:</strong> Alliance - hvis spillerne deler AL information med hende, får de adgang til hendes netværk (Fixer checks +2).</p>
+    <p><strong>Hemmelighed (Human Perception DV 15):</strong> Hun VIDSTE at Rex var korrupt. Hun ventede bare på at han fejlede, så hun kunne overtage hans forretning.</p>
+</div>
+
+<h3>Scene 1.5: Vivian "Viper" Holm (Media)</h3>
+
+<p>En time efter ildkampen ankommer en bil fra WorldSat Media Division. Media'en <strong>Vivian "Viper" Holm</strong> vil skabe narrativet: "Voldelige anarkister besætter faldefærdig bygning."</p>
+
+<div class="npc">
+    <h4>Vivian "Viper" Holm</h4>
+    <p><strong>Stats:</strong> Media 4, Persuasion +7, Human Perception +6</p>
+    <p><strong>Motivation:</strong> En viral story. Hun er ligeglad med sandheden - hun vil have views.</p>
+    <p><strong>Taktik:</strong> Provokerende spørgsmål som "Så I mener, det er jeres ret at dræbe folk for at beskytte jeres 'hjem'?"</p>
+</div>
+
+<h4>Spillernes Valgmuligheder med Vivian:</h4>
+
+<p><strong>A) Intimidation (DV 15) - "Trusler"</strong></p>
+<ul>
+    <li>Ved SUCCESS: Hun forsvinder - men kameraet filmede hele truslen</li>
+    <li>KONSEKVENS næste dag: WorldSat kører looped klip af truslerne. NCPD sender "Wellness Check" patruljer til The Block. DV for alle social checks i kvarteret stiger med +2.</li>
+</ul>
+
+<p><strong>B) Persuasion (DV 15) - "Vi Vender Narrativet"</strong></p>
+<ul>
+    <li>Kræver OGSÅ: Et bevis (billede af WorldSat-udstyr, eller Ricos lydklip)</li>
+    <li>Ved SUCCESS: "Okay. Jeg giver jer 24 timer til at finde MER. Hvis I leverer, kører jeg jeres vinkel."</li>
+    <li>BELØNNING hvis de leverer: Vivian bliver ustabil allieret. Hun giver dem adgang til WorldSat's interne kalender (afslører at J-Loup har møde i Bymidte Arkiv om 36 timer).</li>
+    <li>KONSEKVENS hvis de IKKE leverer: Hun kører "spillerne lovede beviser, men løj"-historie. -2 Reputation.</li>
+</ul>
+
+<p><strong>C) Ignorer Hende</strong></p>
+<ul>
+    <li>Hun interviewer naboerne i stedet - Dr. Carver (panisk nævner "alle de døde"), Gina (siger "de tiltrækker vold")</li>
+    <li>KONSEKVENS: Moderat negativ historie. NCPD får "anonymous tips" om ulovlig våbenbesiddelse. Spillerne får besøg af korrupt betjent der vil have 500eb for at "glemme" hvad han så.</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>INVESTIGATION SYSTEM: CLUES</h2>
+
+<div class="gm-note">
+    <strong>Hvordan Investigation virker:</strong> Spillerne laver Evidence Checks for hver clue. Ved SUCCESS dealer de damage til Mystery's Complexity (50 points). Når Complexity når 0, er mysteriet løst. Ved FIASKO tager de Focus damage (mental udmattelse).
+</div>
+
+<div class="clue">
+    <h4>CLUE 1: RICOS LYDKLIP</h4>
+    <div class="check-info">
+Type: Digital Scavenging
+Skill: Electronics/Security Tech DV 13
+Damage: 3d6 - 2 (Obfuscation) til Mystery Complexity
+Focus Damage ved Fiasko: 2d6
+Tid: 1 time
+    </div>
+    <p><strong>Hvad spillerne lærer:</strong></p>
+    <p>Med en vellykket check hører de gennem forvrængningen: <em>"...Rex bekræftede... hullet er lukket... J-Loup er betalt."</em></p>
+    <ul>
+        <li>Rex er nævnt ved navn - han er involveret</li>
+        <li>"Hullet" = juridisk smuthul (reference til Dokument 701)</li>
+        <li>J-Loup er bagmanden der betalte Rex</li>
+    </ul>
+    <p><strong>Fumble (nat 1):</strong> Lydfilen bliver korrupt og kan ikke genskabes. Rico er rasende. -2 på alle fremtidige checks der involverer Rico.</p>
+</div>
+
+<div class="clue">
+    <h4>CLUE 2: NABO-INTERVIEWS</h4>
+    <div class="check-info">
+Type: Interrogation
+Skill: Human Perception eller Interrogation DV 13-17 (afhænger af NPC)
+Damage: 3d6 - 4 (Obfuscation) til Mystery Complexity
+Focus Damage ved Fiasko: 2d6
+Tid: 30 min per nabo
+    </div>
+    
+    <p><strong>Dr. Carver (Interrogation DV 13):</strong></p>
+    <ul>
+        <li>Ved SUCCESS: "Rex var nervøs den sidste uge. Spurgte mig om... medicinsk udstyr til en skadet person. Jeg spurgte ikke hvem."</li>
+        <li>Hidden info (Human Perception DV 15): Han VIDSTE det handlede om Carmen (Rex' kone). Han lyver for at skjule sin egen involvering.</li>
+    </ul>
+
+    <p><strong>Gina (Conversation DV 13):</strong></p>
+    <ul>
+        <li>"Rex havde besøg for tre uger siden. Mænd i jakkesæt. WorldSat-logo på deres kuffert. Han så dødsangst ud bagefter."</li>
+    </ul>
+
+    <p><strong>Molly (Interrogation DV 17 - SVÆR):</strong></p>
+    <ul>
+        <li>Ved SUCCESS: "Rex fik en pakke for to uger siden. Ingen afsender. Han brændte den bagefter. Men jeg så asken - det var et billede af en kvinde."</li>
+        <li>Hvis spillerne presser hende (Intimidation DV 15): "Okay, OKAY. Det var hans kone, Carmen. Jeg ved ikke hvor hun er, men Rex troede hun var død."</li>
+    </ul>
+
+    <p><strong>Fumble:</strong> Naboen lukker helt ned. Ingen fra Crewet kan prøve igen med denne NPC.</p>
+</div>
+
+<div class="clue">
+    <h4>CLUE 3: REX' LEJLIGHED - FORENSICS</h4>
+    <div class="check-info">
+Type: Forensics
+Skill: Criminology eller Perception DV 14
+Damage: 4d6 - 0 (Obfuscation) til Mystery Complexity
+Focus Damage ved Fiasko: 3d6
+Tid: 1 time grundig søgning
+    </div>
+    <p><strong>Ved SUCCESS - Fund:</strong></p>
+    <ul>
+        <li>Løs gulvplanke under skrivebordet</li>
+        <li>Datapaden ligger skjult derunder</li>
+        <li>Et brændt billede (85% ødelagt, men man kan se en kvindes profil)</li>
+        <li>En orange cyborg-kat ("Data") med mechanical tail sidder sultende ved madskålen</li>
+    </ul>
+    <p><strong>Fumble:</strong> Spillerne træder på gulvplanken, der knækker. Datapaden falder ned i hulrummet mellem etager. Kræver Athletics DV 15 at hente den op (ellers skal de rive gulvet op - støjende og tidskrævende, alerter måske naboer eller WorldSat).</p>
+</div>
+
+<div class="clue">
+    <h4>CLUE 4: DATAPADEN - DECRYPTION</h4>
+    <div class="check-info">
+Type: Digital Scavenging / Deciphering
+Skill: Electronics/Security Tech DV 15 ELLER Cryptography DV 14
+Damage: 4d6 - 2 (Obfuscation) til Mystery Complexity
+Focus Damage ved Fiasko: 3d6
+Tid: 2 timer (1 time ved critical success)
+    </div>
+    <p><strong>Ved SUCCESS - Datapad'ens Indhold:</strong></p>
+    <ul>
+        <li>Krypteret faktura fra "J-Loup" til Rex</li>
+        <li>Betaling: 20.000eb</li>
+        <li>Tjenesteydelse: "Konsulentbistand vedr. annullering af servitut, Dok. 701, Bymidte Arkiv"</li>
+        <li>Timestamp: 8 dage før WorldSat-angrebet</li>
+    </ul>
+    
+    <div style="background: #ffe6e6; padding: 10px; margin: 10px 0; border: 2px solid #d90429;">
+        <strong>⚠️ KRITISK VIGTIG:</strong> Når datapaden dekrypteres, sendes et stille signal til WorldSat. De ved nu, at spillerne har beviset. Cleaner-angrebet (se Scene 2.0) udløses automatisk om 1d6 timer!
+    </div>
+
+    <p><strong>Alternative metoder:</strong></p>
+    <ul>
+        <li>Betal Dr. Carver 500eb + en tjeneste - han dekrypterer på 30 min</li>
+        <li>Betal Molly 300eb - hun har kontakter der kan gøre det på 1 time</li>
+        <li>Maya (Ricos søster) gør det GRATIS, men det tager 4 timer (farligt med ticking clock!)</li>
+    </ul>
+
+    <p><strong>Fumble:</strong> Datapaden låser sig selv i 4 timer. -2 på næste forsøg at dekryptere.</p>
+</div>
+
+<div class="clue">
+    <h4>CLUE 5: MAYA (REX' ADOPTIVDATTER)</h4>
+    <div class="check-info">
+Type: Observation + Interrogation
+Skill: Human Perception DV 13, derefter Persuasion DV 14
+Damage: 3d6 + 4d6 - 4 (Obfuscation på hver) til Mystery Complexity
+Focus Damage ved Fiasko: 2d6
+Tid: 30 minutter
+    </div>
+    
+    <p><strong>Setup:</strong> Når spillerne ankommer til Rex' lejlighed, sidder der en teenager (14 år) med neonblåt hår i sofaen. Hun har et cyberdeck I-XI duct-taped til hendes arm.</p>
+
+    <p><strong>Human Perception DV 13 - Observation:</strong></p>
+    <ul>
+        <li>Hun har grædt - øjnene er røde</li>
+        <li>Hun holder et billede af en kvinde (Carmen)</li>
+        <li>Hendes cyberdeck er hjemmelavet og ser farligt ud</li>
+        <li>Hun er bange, men også vred</li>
+    </ul>
+
+    <p><strong>Persuasion DV 14 - At få hende til at tale:</strong></p>
+    <p>Maya er loyal over for Rex. Spillerne skal bevise de vil hjælpe ham, ikke straffe ham.</p>
+    <p>Ved SUCCESS siger hun: <em>"Rex er ikke ond! De kidnappede Carmen! Han fik et billede af hende med en besked: 'Cooperate or she dies.' Han skulle vælge mellem hende og jer alle. Hvad ville I have gjort?!"</em></p>
+
+    <p><strong>Ved SUCCESS - Hun viser Rex' Panik-Cache:</strong></p>
+    <ul>
+        <li>Billede af Carmen med timestamp fra for 2 uger siden (hun lever!)</li>
+        <li>Besked på bagsiden: "Cooperate or she dies. -J.L."</li>
+        <li>Adresse til et safehouse i Little China (halvt brændt væk)</li>
+    </ul>
+
+    <p><strong>Bonus hvis spillerne behandler Maya godt:</strong> Hun tilbyder at hjælpe med hacking fremover (Netrunner ally, selvom hun kun er level 2).</p>
+</div>
+
+<div class="clue">
+    <h4>CLUE 6: WORLDSAT CORPORATE RESEARCH</h4>
+    <div class="check-info">
+Type: Research
+Skill: Library Search DV 15
+Damage: 2d6 - 4 (Obfuscation) til Mystery Complexity
+Focus Damage ved Fiasko: 1d6
+Tid: 3 timer research
+    </div>
+    <p><strong>Ved SUCCESS - Fund:</strong></p>
+    <ul>
+        <li>WorldSat har ansøgt om byggetilladelser i området 6 gange på 2 år - alle nægtet pga. Dokument 701</li>
+        <li>"Dok. 701" nævnes i en gammel artikel fra 2020 som "beskyttelsesdokument fra Reclamation Act" - det forhindrer tvangsfjernelser i visse zoner</li>
+        <li>J-Loup = Jacques Loupé, corporate lawyer, specialiseret i "ejendomsret og tvangsfjernelser"</li>
+        <li>WorldSat planlægger at bygge en "datahub" i området - værdien estimeres til 50+ millioner eurodollars</li>
+    </ul>
+
+    <p><strong>Alternativ metode:</strong> Betal Molly 300eb - hun leverer samme information på 30 minutter gennem sine kontakter.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>OBSTACLES (FORHINDRINGER)</h2>
+
+<div class="gm-note">
+    <strong>Om Obstacles:</strong> Obstacles er komplikationer der tager Focus damage uden at give Complexity damage. De repræsenterer frustrationer og forsinkelser. Brug dem når det giver dramatisk mening.
+</div>
+
+<div class="obstacle">
+    <h4>OBSTACLE 1: NABOERNES FRYGT (Social Engineering)</h4>
+    <p><strong>Problem:</strong> Naboerne er bange for at tale. WorldSat kan komme efter dem hvis de hjælper.</p>
+    <p><strong>Check:</strong> Persuasion DV 14</p>
+    <p><strong>Alternativ:</strong> Tilbyd beskyttelse - koster 500eb at hyre ekstra sikkerhed for en uge</p>
+    <p><strong>Ved SUCCESS:</strong> Naboerne deler information, ingen Focus damage</p>
+    <p><strong>Ved FIASKO:</strong> 2d6 Focus damage. Naboerne lukker sig inde. DV for fremtidige social checks med naboer stiger med +2.</p>
+</div>
+
+<div class="obstacle">
+    <h4>OBSTACLE 2: VIVIANS OVERVÅGNINGSDRONE (Authority/Digital)</h4>
+    <p><strong>Problem:</strong> Efter sit interview efterlader Vivian en drone der filmer bygningen.</p>
+    <p><strong>Check 1:</strong> Perception DV 15 at spotte dronen</p>
+    <p><strong>Check 2:</strong> Electronics/Security Tech DV 13 at deaktivere den</p>
+    <p><strong>Ved SUCCESS:</strong> Dronen deaktiveres, spillerne undgår overvågning</p>
+    <p><strong>Ved FIASKO:</strong> 2d6 Focus damage + WorldSat får livefeed af investigationen. Cleaner-angrebet sker 2 timer tidligere!</p>
+</div>
+
+<div class="obstacle">
+    <h4>OBSTACLE 3: TIDSPRES (Ticking Clock)</h4>
+    <p><strong>Mekanik:</strong> Hver 6 timer game-tid, ryk clocken frem:</p>
+    <ul>
+        <li><strong>48 timer:</strong> Udgangspunkt</li>
+        <li><strong>42 timer:</strong> WorldSat surveydrones begynder at cirkle bygningen</li>
+        <li><strong>36 timer:</strong> WorldSat-ansatte måler bygningen med laserværktøj</li>
+        <li><strong>30 timer:</strong> "Condemnation Pending"-skilte sættes op</li>
+        <li><strong>24 timer:</strong> NCPD advarselsbreve under alle døre: "Evacuation strongly recommended within 24 hours." NCPD patrouljerer området.</li>
+        <li><strong>18 timer:</strong> Naboer begynder at pakke. Moral synker.</li>
+        <li><strong>12 timer:</strong> Dr. Carver lukker sin klinik. Molly: "Jeg har hørt, at bulldozerne allerede kører fra depotet."</li>
+        <li><strong>6 timer:</strong> Halvdelen af naboerne er evakueret</li>
+        <li><strong>0 timer:</strong> SWAT og bulldozers ankommer. The Block bliver lovligt ryddet. (Potentiel start på ny campaign arc: guerilla-modstand)</li>
+    </ul>
+    <p><strong>Spillernes Focus:</strong> Hver gang de når en kritisk milepæl (24t, 12t), alle spillere tager 1d6 Focus damage fra stress.</p>
+</div>
+
+<div class="obstacle">
+    <h4>OBSTACLE 4: INTERN KONFLIKT - NABOERNES FRAKTIONER</h4>
+    <p><strong>Problem:</strong> Naboerne er uenige om hvordan man skal håndtere situationen. Spillerne skal navigere mellem fraktioner:</p>
+    
+    <p><strong>Dr. Carver (Selvisk & Panisk):</strong></p>
+    <ul>
+        <li>Tilbyder gratis behandling hvis spillerne lover ikke at eksponere hans stjålne forsyninger</li>
+        <li>Hvis afvist eller eksponeret: Nægter at behandle sårede. Kan endda flygte fra The Block.</li>
+    </ul>
+
+    <p><strong>Gina (Idealist & Moraliserende):</strong></p>
+    <ul>
+        <li>Kræver "ingen mere vold" løfte</li>
+        <li>Hvis spillerne BRYDER løftet: -3 Reputation i kvarteret</li>
+        <li>Hvis spillerne tilbyder at evakuere hendes dyr til sikkerhed: +1 Reputation, hun hjælper aktivt</li>
+    </ul>
+
+    <p><strong>Rico (Klout-Chaser):</strong></p>
+    <ul>
+        <li>Vil udgive ALT med det samme for views</li>
+        <li>Hvis ikke stoppet: Historien går viralt (50k views), men alerter også J-Loup. Cleaner-angrebet sker 2 timer tidligere.</li>
+        <li>Kan stoppes med Persuasion DV 14 ("Vent 24 timer, så får du BEDRE story") eller bribe 200eb</li>
+    </ul>
+
+    <p><strong>Molly (Den Kolde Beregner):</strong></p>
+    <ul>
+        <li>Tilbyder alliance hvis spillerne deler AL information</li>
+        <li>Hun VIDSTE Rex var korrupt, men ventede på at overtage</li>
+        <li>Hvis konfronteret: "Sådan fungerer business, choombas." Hun er nyttig, men aldrig at stole på.</li>
+    </ul>
+
+    <p><strong>GM Tip:</strong> Lad spillernes valg her få konsekvenser senere. Naboer de behandler dårligt kan sabotere. Naboer de hjælper kan redde dem senere.</p>
+</div>
+
+<div class="obstacle">
+    <h4>RED HERRING: MOLLY SOM MISTÆNKT</h4>
+    <p><strong>Setup:</strong> Plant beviser der peger mod Molly som den mulige forræder:</p>
+    <ul>
+        <li>Hun har WorldSat-kontakter (synligt i hendes Agent hvis hacked)</li>
+        <li>Hun blev set tale med fremmed i jakkesæt dagen før angrebet</li>
+        <li>Hun vidste om Rex' korruption men sagde intet</li>
+        <li>Hun står til at overtage Rex' forretning hvis han forsvinder</li>
+    </ul>
+
+    <p><strong>Human Perception DV 15 - Sandheden:</strong></p>
+    <p>Molly VIDSTE Rex var under pres, men hjalp ikke fordi hun ville overtage hans forretning. Koldblodig business, ikke forræderi. Hun er opportunist, ikke ansvarlig for angrebet.</p>
+
+    <p><strong>Hvis spillerne anklager hende offentligt:</strong></p>
+    <ul>
+        <li>Hun bliver fjende (-4 på alle fremtidige checks med hende)</li>
+        <li>Hun nægter at hjælpe resten af sessionen</li>
+        <li>Spillerne har spildt tid og skal finde de RIGTIGE beviser</li>
+        <li>Hun kan aktivt sabotere deres undersøgelse senere</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h2>SCENE 2.0: CLEANER-ANGREBET</h2>
+
+<div class="gm-note">
+    <strong>Trigger:</strong> Denne scene udløses når datapaden dekrypteres ELLER efter 4 timer hvis spillerne ikke har gjort det endnu. Rul 1d6 for præcis timing af ankomst (i timer efter dekryptering).
+</div>
+
+<div class="read-aloud">
+    <p><strong>Læs højt når scenen starter:</strong></p>
+    <p>Datapaden er dekrypteret. I ser beviset klart og tydeligt: Rex solgte jer ud for 20.000eb til en mand ved navn Jacques Loupé - "J-Loup". Men før I kan tage et åndedrag, før I kan diskutere hvad I skal gøre... EKSPLODERER vinduet.</p>
+    <p>En flashbang ruller ind på gulvet. Jeres ører ringer. Verden bliver hvid. Og gennem røgen, gennem den blændende smerte, ser I ham:</p>
+    <p>En skikkelse i sort tactical gear. Maske over ansigtet. Han klatrer ind gennem vinduet med militær præcision, bevægelser som en maskine. I hans ene hånd: En lyddæmpet pistol. Og i hans andet arm, holdt tæt mod hans krop som et skjold: Maya.</p>
+    <p>Hendes øjne er vidt åbne af ren panik. Hans arm er omkring hendes hals. Hun kan ikke råbe. Hun kan ikke flygte.</p>
+    <p>Gennem en voice modulator kommer ordene, kolde og emotionsløse som et automatiseret telefonsvar: "Datapaden. Nu. Eller pigen dør om 10 sekunder."</p>
+    <p>Pause. Lad spillerne føle vægten af øjeblikket.</p>
+    <p>"Ti... Ni..."</p>
+</div>
+
+<div class="combat-stats">
+    <h3>WorldSat "Cleaner" - Combat Stats</h3>
+    <table>
+        <tr><th>Stat</th><th>Value</th></tr>
+        <tr><td>Role</td><td>Solo 5</td></tr>
+        <tr><td>INT</td><td>6</td></tr>
+        <tr><td>REF</td><td>8</td></tr>
+        <tr><td>DEX</td><td>7</td></tr>
+        <tr><td>BODY</td><td>7</td></tr>
+        <tr><td>WILL</td><td>6</td></tr>
+        <tr><td>Combat Sense</td><td>+6 (alle combat checks)</td></tr>
+        <tr><td>HP</td><td>40</td></tr>
+        <tr><td>SP</td><td>11 (Kevlar under tactical jakke)</td></tr>
+    </table>
+
+    <h4>Skills:</h4>
+    <ul>
+        <li>Handgun +9</li>
+        <li>Stealth +9</li>
+        <li>Athletics +8</li>
+        <li>Evasion +7</li>
+        <li>Martial Arts +7</li>
+        <li>Perception +6</li>
+    </ul>
+
+    <h4>Udstyr:</h4>
+    <ul>
+        <li><strong>Lyddæmpet Heavy Pistol:</strong> 3d6 damage, ROF 2</li>
+        <li><strong>2x Flashbang Grenades:</strong> DEX save DV 15 eller blinded i 1 runde</li>
+        <li><strong>2x Smoke Grenades:</strong> Skaber tung røg i 10m radius i 3 runder</li>
+        <li><strong>Grappling Hook & Rappelling Gear:</strong> Kan escaper via vindue</li>
+        <li><strong>Tracker-Blocker Cyberware:</strong> Immunitet mod digital tracking i 1 time</li>
+    </ul>
+
+    <h4>Cyberware:</h4>
+    <ul>
+        <li>Cybereyes (Low-Light, Targeting Scope)</li>
+        <li>Kerenzikov (Speedware, +1 til Initiative)</li>
+        <li>Subdermal Armor (+2 SP, allerede inkluderet i stats)</li>
+    </ul>
+</div>
+
+<h3>Spillernes Valgmuligheder</h3>
+
+<div class="obstacle">
+    <h4>OPTION A: OVERGIV DATAPADEN</h4>
+    <p><strong>Hvad sker der:</strong></p>
+    <ul>
+        <li>Cleaner tager datapaden</li>
+        <li>Han slipper Maya ved døren mens han trækker sig tilbage</li>
+        <li>Han escaper via grappling hook ned ad bygningens facade</li>
+        <li>Maya overlever - Rico er evigt taknemmelig (+2 Reputation med Rico, +1 generel Reputation: "De ofrede beviset for at redde Maya")</li>
+    </ul>
+
+    <p><strong>TWIST - Smart Spillere:</strong></p>
+    <p>En smart spiller kan have kopieret filen FØR de overleverede datapaden (Basic Tech DV 13 eller Electronics/Security Tech DV 11). Hvis de gjorde det, har de stadig beviset!</p>
+    <p>Alternativt: Hvis en spiller tog foto af skærmen med deres Agent under dekryptering, har de en kopi (ingen check nødvendig hvis de specifikt sagde det).</p>
+</div>
+
+<div class="obstacle">
+    <h4>OPTION B: FORHANDL (Persuasion DV 17 - SVÆR)</h4>
+    <p><strong>Spillerens forsøg:</strong> "Vi giver dig en kopi. Du får hvad du vil have. Slip pigen, og ingen bliver såret."</p>
+    
+    <p><strong>Ved SUCCESS:</strong></p>
+    <ul>
+        <li>Cleaner er pragmatisk og professionel: "Acceptable. Copy the file to this drive." Han kaster en USB-stick på gulvet.</li>
+        <li>Han tager kopien, scanner den for at verificere den er ægte</li>
+        <li>Han slipper Maya ved døren og trækker sig tilbage</li>
+        <li>Spillerne beholder originalen</li>
+        <li><strong>KONSEKVENS:</strong> Han rapporterer til WorldSat: "Targets are skilled negotiators. Recommend elevated threat assessment." Næste gang møder spillerne bedre forberedte fjender.</li>
+    </ul>
+
+    <p><strong>Ved FIASKO:</strong></p>
+    <ul>
+        <li>"Wrong answer." Ingen yderligere advarsler.</li>
+        <li>Han skyder Maya i benet: 4d6 damage</li>
+        <li>Maya screamer af smerte og falder</li>
+        <li>Nu er det fuld combat - men Maya bløder kraftigt</li>
+        <li><strong>TICKING CLOCK:</strong> Maya dør om 3 combat-runder uden First Aid DV 13 eller Paramedic behandling</li>
+        <li>Cleaner bruger kaosset til at trække sig mod vinduet</li>
+    </ul>
+</div>
+
+<div class="obstacle">
+    <h4>OPTION C: ANGRIB (COMBAT SCENE)</h4>
+    
+    <p><strong>Særlige Combat-Regler for Denne Scene:</strong></p>
+
+    <p><strong>Human Shield Mekanik:</strong></p>
+    <ul>
+        <li>Så længe Cleaner holder Maya, får alle ranged attacks -4 penalty (risiko for at ramme hende)</li>
+        <li><strong>Aimed Shot:</strong> DV 17 at ramme Cleaner uden at ramme Maya (kræver fuld action)</li>
+        <li><strong>Hvis spiller fejler ranged attack med 5+ under DV:</strong> De rammer Maya i stedet (rul normal damage)</li>
+    </ul>
+
+    <p><strong>Melee Attacks:</strong></p>
+    <ul>
+        <li>Martial Arts eller Brawling DV 15 at grapple Cleaner og befri Maya</li>
+        <li>Ved SUCCESS: Cleaner taber grebet, Maya falder fri (hun bruger sin action til at løbe i dækning)</li>
+    </ul>
+
+    <p><strong>Cleaner's Combat Taktik (Runde-for-Runde):</strong></p>
+
+    <p><strong>Runde 1:</strong> Defensive positioning</p>
+    <ul>
+        <li>Trækker sig mod vinduet, Maya som skjold</li>
+        <li>Skyder efter den mest truende target (2 shots, +9, 3d6 damage hver)</li>
+        <li>Prioriterer targets der prøver melee approaches</li>
+    </ul>
+
+    <p><strong>Runde 2:</strong> Tactical retreat</p>
+    <ul>
+        <li>Fortsætter mod vinduet</li>
+        <li>Hvis han har taget 15+ damage: Slipper Maya og kaster flashbang (alle DEX saves DV 15 eller blinded i 1 runde, -4 på alle checks)</li>
+        <li>Hvis han IKKE har taget 15+ damage: Fortsætter med at bruge Maya som skjold</li>
+    </ul>
+
+    <p><strong>Runde 3:</strong> Escape preparation</p>
+    <ul>
+        <li>Når han når vinduet: Kaster smoke grenade (10m radius tung røg, -6 på Perception og ranged attacks)</li>
+        <li>Slipper Maya (hun falder på gulvet)</li>
+        <li>Forbereder grappling hook</li>
+    </ul>
+
+    <p><strong>Runde 4:</strong> Escape attempt</p>
+    <ul>
+        <li>Springer ud af vinduet og rappeller ned ad bygningen</li>
+        <li>Spillere kan forfølge med Athletics DV 15 (klatrer efter ham) eller skyde efter ham gennem røgen (DV 19 pga. røg + bevægelse)</li>
+        <li>Hvis ikke stoppet: Han escaper i en ventende bil på gaden</li>
+    </ul>
+</div>
+
+<div class="gm-note">
+    <h4>Hvis Spillerne Fanger/Dræber Cleaner:</h4>
+    
+    <p><strong>Hvis fanget (reduceret til 10 HP eller mindre og surrounded):</strong></p>
+    <p>Han tilbyder information for sit liv (Intimidation DV 13 at få ham til at tale):</p>
+    <p><em>"Okay, OKAY! I'll talk! J-Loup - Jacques Loupé - opererer fra The Afterlife. He's meeting someone called 'The Architect' tomorrow at 23:00. That's when the final documents get signed. He has Carmen - Rex's wife - in a safehouse in Little China, address 2847 Reactive Street, apartment 3B. That's ALL I KNOW, I swear!"</em></p>
+
+    <p>På hans person finder spillerne:</p>
+    <ul>
+        <li>Encrypted commlink til WorldSat (kræver Electronics/Security Tech DV 17 at hacke)</li>
+        <li>500eb kontant</li>
+        <li>Fake ID kort (navn: "Marcus Chen")</li>
+        <li>Et foto af Maya (de vidste præcis hvem de skulle bruge som gidsel)</li>
+    </ul>
+
+    <p><strong>Hvis dræbt:</strong></p>
+    <ul>
+        <li>Samme loot som ovenfor, men ingen information</li>
+        <li>Spillerne skal finde J-Loup på anden måde</li>
+        <li>WorldSat ved deres Cleaner er død - de sender bedre hold næste gang</li>
+    </ul>
+</div>
+
+<div class="combat-stats">
+    <h3>Aftermath - Konsekvenser af Spillernes Valg</h3>
+
+    <h4>HVIS MAYA DØR:</h4>
+    <ul>
+        <li><strong>Rico:</strong> Han bryder fuldstændig sammen. Han vil ALDRIG hjælpe spillerne igen. Kan endda blive aktiv modstander senere. -4 Reputation med Rico permanent.</li>
+        <li><strong>The Block generelt:</strong> -4 Reputation. "De lod et barn dø." Naboer lukker døre i ansigtet på dem.</li>
+        <li><strong>Dr. Carver:</strong> Nægter at behandle "mordere". Ingen medical assistance fra ham resten af campaign'en.</li>
+        <li><strong>Gina:</strong> Starter aktiv kampagne mod spillerne. Kontakter media, aktivist-grupper, måske endda NCPD.</li>
+        <li><strong>Molly:</strong> Ser dem som liability. Bryder enhver alliance. Kan aktivt arbejde imod dem.</li>
+    </ul>
+
+    <h4>HVIS MAYA OVERLEVER (uanset hvordan):</h4>
+    <ul>
+        <li><strong>Rico:</strong> Dedikerer sin næste sang til spillerne. Den går viralt med positiv vinkel. +2 Reputation med Rico, +1 generel Reputation i Night City underground.</li>
+        <li><strong>Maya selv:</strong> Bliver loyal ally. Tilbyder at hjælpe med hacking fremover (Netrunner level 2, men entusiastisk og loyal). Hun VIL hjælpe med at finde Rex og Carmen.</li>
+        <li><strong>The Block:</strong> +1 Reputation. "De reddede Ricos søster." Naboer begynder at samles bag spillerne.</li>
+        <li><strong>Dr. Carver:</strong> Tilbyder ekstra gratis behandling som tak (500eb yderligere værdi).</li>
+        <li><strong>Gina:</strong> Respekterer at de valgte livet over missionen. Stopper med at modsætte sig deres metoder.</li>
+    </ul>
+</div>
+
+<div class="page-break"></div>
+
+<h2>MYSTERY LØST - HVAD VED SPILLERNE NU?</h2>
+
+<div class="gm-note">
+    <p>Når Mystery's Complexity når 0, eller når spillerne har tilstrækkelig information til at forstå situationen, ved de følgende:</p>
+</div>
+
+<h3>Kernefakta Afsløret:</h3>
+
+<ol>
+    <li><strong>Rex forrådte The Block</strong> - men under tvang, ikke frivilligt. Hans kone Carmen blev kidnappet.</li>
+    <li><strong>J-Loup (Jacques Loupé) er bagmanden</strong> - en corporate lawyer specialiseret i tvangsfjernelser og ejendomsret.</li>
+    <li><strong>Dokument 701</strong> er en servitut fra Reclamation Act (2020) der beskytter The Block mod demolition. Rex hjalp J-Loup med at finde måder at annullere dette dokument.</li>
+    <li><strong>WorldSat's egentlige mål</strong> er ikke bare The Block - de vil have hele området til at bygge en massiv datahub (værdi 50+ millioner eb).</li>
+    <li><strong>Ticking Clock</strong> - de har mindre end 48 timer (minus hvad de allerede har brugt) til at stoppe WorldSat's Emergency Condemnation Order.</li>
+    <li><strong>Carmen lever</strong> (hvis Maya-clue blev løst) - hun holdes i et safehouse i Little China som gidsel.</li>
+    <li><strong>J-Loup mødes med "The Architect"</strong> (hvis Cleaner blev fanget) - kl. 23:00 i morgen på The Afterlife, hvor de vil finalisere dokumenterne.</li>
+</ol>
+
+<h3>Næste Skridt for Spillerne:</h3>
+
+<div class="read-aloud">
+    <p><strong>Læs højt som session-afslutning:</strong></p>
+    <p>Støvet lægger sig. Vinduet er smadret, glassplinter overalt som diamanter i det svage neonlys udefra. I har overlevet - igen. I har enten datapaden eller I har Maya. Måske begge dele, hvis I var dygtige eller heldige.</p>
+    <p>Men én ting står krystalklart: I er ikke længere bare ofre i andres spil. I er ikke længere bare beboere der forsvarede deres hjem. I er trusler. I har beviset på WorldSat's korruption. I ved hvem der trak i trådene. I ved hvorfor.</p>
+    <p>WorldSat ved også. De ved hvem I er. De ved hvad I har. Og clocken tikker stadig - ufortrødent, ubønhørligt.</p>
+    <p style="font-size: 1.1em; font-weight: 600; margin-top: 20px;">Jeres næste mission er ikke længere bare at forsvare jer. Det er et kapløb mod tiden:</p>
+    <ul style="font-weight: 600; font-size: 1.05em;">
+        <li>Find J-Loup og stop ham fra at finalisere dokumenterne</li>
+        <li>Find Carmen og befri hende (hvis I vil have Rex' hjælp)</li>
+        <li>Genaktiver eller beskyt Dokument 701</li>
+        <li>Gør alt dette før WorldSat's bulldozers og SWAT-teams ankommer om <span style="color: #d90429;">[X timer tilbage]</span></li>
+    </ul>
+    <p>Og I ved hvad? WorldSat's "Cleaners" kommer tilbage. De sender ikke amatører næste gang.</p>
+    <p style="font-style: normal; font-weight: 700; color: #d90429; margin-top: 20px;">Velkommen til Night City, choombas. Nu begynder det rigtige spil.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>BELØNNINGER & PROGRESSION</h2>
+
+<h3>For "The Apartment" (Præquel) + Aktion 1:</h3>
+
+<table>
+    <tr>
+        <th>Kategori</th>
+        <th>Belønning</th>
+    </tr>
+    <tr>
+        <td><strong>Penge</strong></td>
+        <td>
+            <ul>
+                <li>1.000eb fra de oprindelige WorldSat-soldater (Aktion 0)</li>
+                <li>500eb fra Cleaner (hvis fanget/dræbt)</li>
+                <li>Potential ekstra 200-500eb fra bribes/deals med naboer</li>
+                <li><strong>Total: 1.500-2.000eb</strong></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Udstyr</strong></td>
+        <td>
+            <ul>
+                <li>4x Medium Assault Rifles (fra Aktion 0)</li>
+                <li>4x Light Armorjack (SP11) (fra Aktion 0)</li>
+                <li>Lyddæmpet Heavy Pistol (fra Cleaner, hvis besejret)</li>
+                <li>Grappling hook & rappelling gear (fra Cleaner)</li>
+                <li>2x Flashbang grenades (fra Cleaner, hvis ubrugte)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Tjenester</strong></td>
+        <td>
+            <ul>
+                <li>Dr. Carver: Gratis behandling (500-1000eb værdi) hvis ligene blev fjernet diskret</li>
+                <li>Maya: Netrunner ally (level 2, loyal men uerfaren)</li>
+                <li>Vivian: Ustabil media-kontakt (hvis de vendte hendes narrativ)</li>
+                <li>Molly: Fixer-netværk adgang (hvis alliance blev dannet)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Information</strong></td>
+        <td>
+            <ul>
+                <li>Datapaden med Rex' forræderi og J-Loup connection</li>
+                <li>Viden om Dokument 701 og dets betydning</li>
+                <li>Carmen's safehouse location (hvis Cleaner blev interrogated)</li>
+                <li>J-Loup's møde på The Afterlife (hvis Cleaner blev interrogated)</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Reputation</strong></td>
+        <td>
+            <strong>Basis: Reputation Level 3</strong> - "Dem, der bider fra sig"<br><br>
+            <strong>Modifikationer baseret på spillervalg:</strong>
+            <ul>
+                <li>Maya død: -4 (Final: Level 0 - "Børnemordere")</li>
+                <li>Maya reddet: +1 (Final: Level 4 - "Beskyttere")</li>
+                <li>Vivian charmeret: +1 (Final: Level 4 - "Mediekloge")</li>
+                <li>Vivian truet: -2 (Final: Level 1 - "Voldspsykopater")</li>
+                <li>Naboer hjulpet generøst: +1</li>
+                <li>Naboer intimideret: -2</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<h3>Improvement Points (IP):</h3>
+<p>Spillerne får <strong>30-40 IP</strong> for denne session, afhængigt af hvor godt de håndterede situationen:</p>
+<ul>
+    <li><strong>30 IP:</strong> Basis for at overleve og samle nok information til at løse mysteriet</li>
+    <li><strong>+5 IP:</strong> Hvis Maya overlevede</li>
+    <li><strong>+5 IP:</strong> Hvis de håndterede Vivian smart (ikke bare trusler)</li>
+    <li><strong>+5 IP:</strong> Hvis de fandt kreative løsninger (f.eks. kopierede datapaden før overlevering)</li>
+    <li><strong>-5 IP:</strong> Hvis Maya døde</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>NPC REFERENCE - KOMPLET STATS</h2>
+
+<div class="npc">
+    <h4>Dr. George Carver (Medtech/Ripperdoc)</h4>
+    <p><strong>Role:</strong> Medtech 5</p>
+    <p><strong>Stats:</strong> INT 7, TECH 8, EMP 5</p>
+    <p><strong>Skills:</strong> Paramedic +8, Surgery +7, First Aid +8, Conceal/Reveal Object +5</p>
+    <p><strong>Cyberware:</strong> Cybereyes (Microscopic Vision), Cyberhand (Tool attachments)</p>
+    <p><strong>Udstyr:</strong> Full medtech bag, stolen WorldSat medical supplies (5.000eb værdi)</p>
+    <p><strong>Motivation:</strong> Overleve og undgå juridiske problemer. Selvisk, men ikke ond.</p>
+    <p><strong>Hemmelighed:</strong> Stjålne WorldSat-forsyninger. Vil gøre MEGET for at holde det hemmeligt.</p>
+</div>
+
+<div class="npc">
+    <h4>Gina Zepada (Nomad/Aktivist)</h4>
+    <p><strong>Role:</strong> Nomad 3</p>
+    <p><strong>Stats:</strong> EMP 8, WILL 7, BODY 5</p>
+    <p><strong>Skills:</strong> Persuasion +5, Animal Handling +6, Survival +4, Human Perception +5</p>
+    <p><strong>Særligt:</strong> Ejer 3 sjældne naturlige dyr: "Buddy" (golden retriever), "Shadow" (sort kat), "Echo" (afrikansk gråpapegøje). Værdi: 50.000eb+ på sort marked (hun ville ALDRIG sælge dem).</p>
+    <p><strong>Motivation:</strong> Beskytte sine dyr og skabe en bedre verden. Idealist med principper.</p>
+    <p><strong>Weakness:</strong> Hendes dyr. Trusler mod dem bryder hende fuldstændigt.</p>
+</div>
+
+<div class="npc">
+    <h4>Rico Robinson (Rockerboy)</h4>
+    <p><strong>Role:</strong> Rockerboy 4</p>
+    <p><strong>Stats:</strong> EMP 7, COOL 6, INT 5</p>
+    <p><strong>Skills:</strong> Performance +7, Composition +6, Streetwise +5, Electronics/Security Tech +4, Persuasion +5</p>
+    <p><strong>Udstyr:</strong> Professional audio recorder, Agent with 20k followers, acoustic guitar</p>
+    <p><strong>Motivation:</strong> Fame, views, og at beskytte Maya (hans adopteret lillesøster efter deres forældre døde i 2042).</p>
+    <p><strong>Weakness:</strong> Maya. Hun er hans eneste rigtige familie.</p>
+</div>
+
+<div class="npc">
+    <h4>Molly Anderson (Fixer)</h4>
+    <p><strong>Role:</strong> Fixer 6</p>
+    <p><strong>Stats:</strong> INT 8, COOL 8, EMP 4</p>
+    <p><strong>Skills:</strong> Trading +8, Persuasion +7, Human Perception +8, Streetwise +7, Conversation +6</p>
+    <p><strong>Cyberware:</strong> Neural Link, Chipware Socket (Skill chips), Subdermal Grip</p>
+    <p><strong>Netværk:</strong> Kontakter i NCPD (3 korrupte betjente), corporate security (WorldSat og 2 andre corps), Night Markets (3 vendors), street gangs (Valentinos, 6th Street)</p>
+    <p><strong>Motivation:</strong> Profit og magt. Loyalitet er transaktionel. Respekterer kompetence.</p>
+    <p><strong>Priser for hendes services:</strong>
+        <ul>
+            <li>Information (basic): 100-300eb</li>
+            <li>Information (sensitive): 500-1000eb</li>
+            <li>Fence services: 20% af værdi</li>
+            <li>Kontakt-introduktion: 500eb + de skylder hende en tjeneste</li>
+        </ul>
+    </p>
+</div>
+
+<div class="npc">
+    <h4>Maya (Rico's Søster, Amateur Netrunner)</h4>
+    <p><strong>Role:</strong> Netrunner 2</p>
+    <p><strong>Alder:</strong> 14 år</p>
+    <p><strong>Stats:</strong> INT 7, REF 6, TECH 5</p>
+    <p><strong>Skills:</strong> Electronics/Security Tech +4, Cryptography +3, Stealth +4, Library Search +5</p>
+    <p><strong>Cyberware:</strong> Ingen endnu (for ung), men drømmer om det</p>
+    <p><strong>Udstyr:</strong> Hjemmelavet Cyberdeck (Model I-XI, duct-taped sammen, købt brugt). Det fungerer, men er upålideligt (1-2 på d10 = glitch).</p>
+    <p><strong>Motivation:</strong> Bevise Rex er ikke ond, beskytte Rico, blive en "rigtig" Netrunner.</p>
+    <p><strong>Personality:</strong> Entusiastisk, loyal, naiv. Hun overvurderer sine evner, men lærer hurtigt.</p>
+    <p><strong>Hvis hun bliver ally:</strong> Hun kan hacke simple systemer (DV 13-15), men fejler ofte. Over tid kan hun trænes til at blive bedre.</p>
+</div>
+
+<div class="npc">
+    <h4>Vivian "Viper" Holm (Media)</h4>
+    <p><strong>Role:</strong> Media 4</p>
+    <p><strong>Stats:</strong> INT 7, COOL 7, EMP 5</p>
+    <p><strong>Skills:</strong> Persuasion +7, Human Perception +6, Wardrobe & Style +5, Conversation +6, Photography/Film +6</p>
+    <p><strong>Cyberware:</strong> Cybereyes (Image Enhancement, Targeting Scope, Times Square Marquee), Subdermal Grip, Audio Recorder (internal)</p>
+    <p><strong>Udstyr:</strong> Professional camera drone, WorldSat Media credentials, high-end Agent</p>
+    <p><strong>Motivation:</strong> Karriere-advancement. Hun vil have den story der gør hende til star.</p>
+    <p><strong>Weakness:</strong> Hendes troværdighed. Hvis spillerne kan true hendes reputation, bøjer hun sig.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>HOOK TIL AKTION 2: "THE AFTERLIFE JOB"</h2>
+
+<div class="read-aloud">
+    <p><strong>Setup til næste session:</strong></p>
+    <p>Natten er lang i The Block. Naboerne har barrikaderet sig inde. Dr. Carver behandler sårede i stilhed. Gina holder sine dyr tæt. Rico sidder ved Mayas side, guitaren i hånden, men han spiller ikke.</p>
+    <p>I har information nu. I ved hvem der trak i trådene: Jacques Loupé - "J-Loup" - en corporate lawyer der specialiserer sig i at fjerne "problemer" som The Block.</p>
+    <p>I har tre parallelle missioner foran jer:</p>
+</div>
+
+<h3>Mission Track A: Find J-Loup på The Afterlife</h3>
+<p><strong>Information spillerne har:</strong></p>
+<ul>
+    <li>J-Loup mødes med "The Architect" i morgen kl. 23:00 på The Afterlife</li>
+    <li>De skal finalisere dokumenterne der annullerer Dokument 701</li>
+    <li>Hvis det sker, mister The Block juridisk beskyttelse</li>
+</ul>
+
+<p><strong>Challenges:</strong></p>
+<ul>
+    <li>The Afterlife er Afterlife - et high-security establishment med veteraner og farlige folk</li>
+    <li>J-Loup vil have bodyguards (2-3 corporate security Solos)</li>
+    <li>"The Architect" er ukendt - hvem er denne person?</li>
+    <li>Spillerne skal enten stoppe mødet, stjæle dokumenterne, eller eliminere J-Loup</li>
+</ul>
+
+<h3>Mission Track B: Befri Carmen (Optional)</h3>
+<p><strong>Information spillerne har (kun hvis Cleaner blev interrogated):</strong></p>
+<ul>
+    <li>Carmen holdes i safehouse på 2847 Reactive Street, Little China, apartment 3B</li>
+    <li>Hun er Rex' kone og årsagen til hans forræderi</li>
+    <li>Hvis befrieret: Rex vil hjælpe spillerne (han har kontakter og viden)</li>
+</ul>
+
+<p><strong>Challenges:</strong></p>
+<ul>
+    <li>Safehouse er bevogttet (2-4 WorldSat guards)</li>
+    <li>Carmen kan være skadet eller traumatiseret</li>
+    <li>Timing: Skal ske før eller samtidig med Afterlife-jobbet</li>
+    <li>Hvis de fejler: Carmen kan bruges som leverage mod dem</li>
+</ul>
+
+<h3>Mission Track C: Beskyt/Genaktiver Dokument 701</h3>
+<p><strong>Information spillerne har:</strong></p>
+<ul>
+    <li>Dokument 701 er lagret i Bymidte Arkiv</li>
+    <li>J-Loup har fået "konsulent-adgang" til at "annullere" dokumentet</li>
+    <li>Fysisk dokument + digital kopi skal beskyttes</li>
+</ul>
+
+<p><strong>Challenges:</strong></p>
+<ul>
+    <li>Arkivet er bureaucratic nightmare - kræver permits, ID, eller infiltration</li>
+    <li>WorldSat har insiders i arkivet</li>
+    <li>Dokumentet kan allerede være manipuleret</li>
+    <li>Backup-plan: Hvis dokumentet er ødelagt, kan de få det genaktiveret? (kræver juridisk ekspertise eller blackmail af rigtige personer)</li>
+</ul>
+
+<h3>Ticking Clock Fortsætter:</h3>
+<table>
+    <tr>
+        <th>Timer Tilbage</th>
+        <th>Hvad Sker Der</th>
+    </tr>
+    <tr>
+        <td>36 timer</td>
+        <td>J-Loup's møde med The Architect er om 12 timer. Sidste chance at stoppe dokumentunderskrivelsen.</td>
+    </tr>
+    <tr>
+        <td>24 timer</td>
+        <td>Dokumenterne er underskrevet (hvis ikke stoppet). NCPD får juridisk mandat til at rydde The Block. Patrouljering intensiveres.</td>
+    </tr>
+    <tr>
+        <td>12 timer</td>
+        <td>Evacuation orders sendes ud. Naboer flygter massivt. Dr. Carver lukker klinikken. Spillerne kan miste deres base.</td>
+    </tr>
+    <tr>
+        <td>0 timer</td>
+        <td>SWAT og bulldozers ankommer. The Block ryddes med magt. Game Over for denne storyline (men kan føre til guerilla-resistance campaign).</td>
+    </tr>
+</table>
+
+<h3>Spillernes Valg:</h3>
+<p>De skal prioritere. De kan ikke nå alt. Hvad er vigtigst?</p>
+<ul>
+    <li><strong>Stop J-Loup direkte</strong> (agressiv, men risikabel)</li>
+    <li><strong>Befri Carmen først</strong> (får Rex som ally, men bruger tid)</li>
+    <li><strong>Beskyt dokumentet</strong> (defensiv, men måske ikke nok)</li>
+    <li><strong>Split the party</strong> (farligt, men dækker flere fronter)</li>
+</ul>
+
+<div class="gm-note">
+    <strong>GM Tip for Aktion 2:</strong>
+    <p>Lad spillernes valg her definere hvilken type campaign det bliver:</p>
+    <ul>
+        <li>Hvis de går efter J-Loup direkte: High-octane action i The Afterlife</li>
+        <li>Hvis de befrier Carmen først: Emotionel, character-driven med Rex redemption arc</li>
+        <li>Hvis de fokuserer på dokumentet: Heist/infiltration med bureaucratic obstacles</li>
+        <li>Hvis de splitter party: Multi-track parallel scenes med høj tension</li>
+    </ul>
+    <p>Der er ingen "rigtig" løsning. Lad konsekvenserne være naturlige baseret på deres prioriteter.</p>
+</div>
+
+<div class="page-break"></div>
+
+<h2>APPENDIX: QUICK REFERENCE</h2>
+
+<h3>Investigation System Cheatsheet</h3>
+
+<table>
+    <tr>
+        <th>Action</th>
+        <th>Regel</th>
+    </tr>
+    <tr>
+        <td>Evidence Check</td>
+        <td>Skill check mod DV. Success = deal damage til Complexity. Failure = take Focus damage.</td>
+    </tr>
+    <tr>
+        <td>Fumble (nat 1 + fail)</td>
+        <td>Extra complications occur (se individual clue descriptions).</td>
+    </tr>
+    <tr>
+        <td>Obfuscation</td>
+        <td>Reducerer damage til Complexity (fungerer som SP for mysteries).</td>
+    </tr>
+    <tr>
+        <td>Focus Recovery</td>
+        <td>Rest for a day = recover INT + WILL Focus. Concentration DV 15 = +5 extra.</td>
+    </tr>
+    <tr>
+        <td>Multiple attempts</td>
+        <td>Én Evidence Check per Clue per dag per Edgerunner.</td>
+    </tr>
+    <tr>
+        <td>Deduction Check</td>
+        <td>DV 15, costs 1d6 Focus. På success, GM giver hint om hvor næste clue er.</td>
+    </tr>
+</table>
+
+<h3>DVs Quick Reference</h3>
+
+<table>
+    <tr>
+        <th>Task</th>
+        <th>DV</th>
+    </tr>
+    <tr><td>Spot obvious clue</td><td>11-13</td></tr>
+    <tr><td>Decode Rico's audio clip</td><td>13</td></tr>
+    <tr><td>Interview Dr. Carver</td><td>13</td></tr>
+    <tr><td>Interview Gina</td><td>13</td></tr>
+    <tr><td>Interview Molly</td><td>17</td></tr>
+    <tr><td>Search Rex' apartment</td><td>14</td></tr>
+    <tr><td>Decrypt datapad</td><td>14-15</td></tr>
+    <tr><td>Gain Maya's trust</td><td>14</td></tr>
+    <tr><td>Research WorldSat</td><td>15</td></tr>
+    <tr><td>Persuade Vivian</td><td>15</td></tr>
+    <tr><td>Intimidate Vivian</td><td>15</td></tr>
+    <tr><td>Spot surveillance drone</td><td>15</td></tr>
+    <tr><td>Negotiate with Cleaner</td><td>17</td></tr>
+    <tr><td>Aimed shot (avoid Maya)</td><td>17</td></tr>
+</table>
+
+<h3>NPC Reaction Quick Guide</h3>
+
+<table>
+    <tr>
+        <th>NPC</th>
+        <th>Vil Hjælpe Hvis...</th>
+        <th>Bliver Fjende Hvis...</th>
+    </tr>
+    <tr>
+        <td>Dr. Carver</td>
+        <td>Spillerne beskytter hans hemmelighed</td>
+        <td>Spillerne eksponerer hans stjålne forsyninger</td>
+    </tr>
+    <tr>
+        <td>Gina</td>
+        <td>Spillerne lover ikke-vold eller beskytter hendes dyr</td>
+        <td>Spillerne bruger overdreven vold eller truer dyr</td>
+    </tr>
+    <tr>
+        <td>Rico</td>
+        <td>Spillerne beskytter Maya</td>
+        <td>Maya dør eller bliver alvorligt skadet</td>
+    </tr>
+    <tr>
+        <td>Molly</td>
+        <td>Spillerne deler information og beviser kompetence</td>
+        <td>Spillerne fejler åbenlyst eller anklager hende falskt</td>
+    </tr>
+    <tr>
+        <td>Maya</td>
+        <td>Spillerne vil hjælpe Rex og behandler hende med respekt</td>
+        <td>Spillerne vil straffe/dræbe Rex uden at høre hans side</td>
+    </tr>
+    <tr>
+        <td>Vivian</td>
+        <td>Spillerne giver hende en bedre story end WorldSat's</td>
+        <td>Spillerne truer hende eller angriber hendes crew</td>
+    </tr>
+</table>
+
+<h3>Loot Summary</h3>
+
+<p><strong>Fra WorldSat Soldiers (Aktion 0):</strong></p>
+<ul>
+    <li>1.000eb kontant</li>
+    <li>4x Medium Assault Rifles</li>
+    <li>4x Light Armorjack (SP11)</li>
+    <li>Assorted ammo</li>
+</ul>
+
+<p><strong>Fra Cleaner (hvis besejret):</strong></p>
+<ul>
+    <li>500eb kontant</li>
+    <li>Lyddæmpet Heavy Pistol (3d6)</li>
+    <li>Grappling hook & rappelling gear</li>
+    <li>2x Flashbang grenades (hvis ubrugte)</li>
+    <li>2x Smoke grenades (hvis ubrugte)</li>
+    <li>Encrypted commlink (værdi 1000eb hvis solgt, eller intel hvis hacked DV 17)</li>
+    <li>Fake ID</li>
+</ul>
+
+<p><strong>Information Assets:</strong></p>
+<ul>
+    <li>Datapaden med Rex/J-Loup correspondence</li>
+    <li>Ricos lydklip (bevis på WorldSat involvement)</li>
+    <li>Maya som Netrunner ally</li>
+    <li>Potential Vivian som Media contact</li>
+    <li>Potential Molly's Fixer netværk</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>GM NOTER & IMPROVISATION TIPS</h2>
+
+<h3>Hvis Spillerne Går Helt Off-Script:</h3>
+
+<div class="gm-note">
+    <p><strong>Scenario: Spillerne vil kontakte NCPD direkte</strong></p>
+    <p>Lad dem prøve! Men husk: NCPD i Night City er korrupt. WorldSat har sandsynligvis kontakter der.</p>
+    <ul>
+        <li>Korrupt officer (Streetwise DV 15 at identificere): Vil "hjælpe" for 2000eb, men advarer faktisk WorldSat</li>
+        <li>Ærlig officer (sjælden!): Vil undersøge, men bureaucracy betyder det tager 48+ timer - for sent</li>
+        <li>Bedste case: De finder en officer der HADER corps og vil hjælpe - men kræver solidt bevis (datapaden er perfekt)</li>
+    </ul>
+</div>
+
+<div class="gm-note">
+    <p><strong>Scenario: Spillerne vil flygte fra The Block</strong></p>
+    <p>Det er en valid strategi! Men konsekvenser:</p>
+    <ul>
+        <li>Alle naboer ser dem som kujoner og forrædere</li>
+        <li>-10 Reputation permanent</li>
+        <li>WorldSat rydder The Block alligevel</li>
+        <li>Alle NPCs fra The Block (Carver, Gina, Rico, Maya, Molly) bliver døde eller forsvundne</li>
+        <li>Spillerne får "Coward" reputation i Night City - DV +2 på alle social checks</li>
+        <li>MEN: WorldSat stopper IKKE med at jage dem. De ved for meget.</li>
+    </ul>
+    <p>Hvis de vælger denne rute, transformer campaign'en til "On the Run" - de er nu hunted og skal finde måde at slå tilbage på.</p>
+</div>
+
+<div class="gm-note">
+    <p><strong>Scenario: Spillerne vil gå direkte efter WorldSat executives</strong></p>
+    <p>Ambitiøst! Men hugely difficult:</p>
+    <ul>
+        <li>WorldSat executives bor i Corporate Plaza med elite security</li>
+        <li>At nå dem kræver serious Netrunning, Social Engineering, eller Infiltration</li>
+        <li>Hvis de LYKKES: Massiv impact, men også massive heat. WorldSat vil sende deres bedste assets efter spillerne.</li>
+        <li>Consider this en "Hard Mode" løsning - belønning skal matche risikoen</li>
+    </ul>
+</div>
+
+<h3>Hvis Spillerne Fejler Totalt:</h3>
+
+<div class="gm-note">
+    <p><strong>Worst Case: The Block bliver ryddet, spillerne overlever</strong></p>
+    <p>Dette er IKKE game over! Det er transformation af campaign:</p>
+    <ul>
+        <li><strong>New Goal:</strong> Hævn mod WorldSat og genopbygning af community</li>
+        <li><strong>New Base:</strong> Spillerne må finde nyt sted (måske Combat Zone squat, måske Nomad camp)</li>
+        <li><strong>New Allies:</strong> Displaced naboer bliver guerilla-fighters</li>
+        <li><strong>New Tone:</strong> Fra "Defense" til "Retribution"</li>
+    </ul>
+    <p>Rex kan dukke op igen, ødelagt af guilt, willing to help tage WorldSat ned indefra.</p>
+    <p>Maya kan blive hardcore Netrunner drevet af hævn.</p>
+    <p>Det kan blive en BEDRE campaign end success - Cyberpunk handler om at rejse sig efter fald.</p>
+</div>
+
+<h3>Pacing Tips:</h3>
+
+<ul>
+    <li><strong>Session 1 Duration:</strong> 3-4 timer typisk
+        <ul>
+            <li>30 min: Aftermath og nabo-samtaler</li>
+            <li>30 min: Vivian scene</li>
+            <li>60-90 min: Investigation (clues 1-4)</li>
+            <li>30-45 min: Cleaner scene</li>
+            <li>15 min: Wrap-up og hook til session 2</li>
+        </ul>
+    </li>
+    <li><strong>Hvis spillerne går for hurtigt:</strong> Tilføj Obstacles (dronen, nabo-konflikter, random NCPD patrol)</li>
+    <li><strong>Hvis spillerne går for langsomt:</strong> Lad Cleaner komme tidligere, eller lad Vivian returnere med "breaking news" der presser dem</li>
+    <li><strong>Cliff-hanger moment:</strong> End altid på spænding - Cleaners attack, ticking clock når kritisk punkt, eller Maya afslører crucial information lige før session slutter</li>
+</ul>
+
+<h3>Tone Management:</h3>
+
+<p><strong>Cyberpunk RED tone balance:</strong></p>
+<ul>
+    <li>40% Gritty realism (consequences matter, choices are hard)</li>
+    <li>30% Action (cool combat, cinematic moments)</li>
+    <li>20% Investigation/Problem-solving (brains over brawn when possible)</li>
+    <li>10% Dark humor (Sanitron-dronen, Rico's absurde optimisme, corporate dystopia jokes)</li>
+</ul>
+
+<p><strong>Emotional beats at ramme:</strong></p>
+<ul>
+    <li><strong>Fear:</strong> Når Cleaner kommer, når ticking clock når kritiske punkter</li>
+    <li><strong>Anger:</strong> Når spillerne indser Rex' forræderi, når Vivian manipulerer</li>
+    <li><strong>Hope:</strong> Når de finder Maya, når naboer samles bag dem</li>
+    <li><strong>Determination:</strong> Session-afslutning - "Vi kan gøre noget ved dette"</li>
+</ul>
+
+<div class="page-break"></div>
+
+<h2>CREDITS & DESIGN NOTES</h2>
+
+<p><strong>Modul Design:</strong> Original koncept revideret med Cyberpunk RED Investigation System</p>
+<p><strong>Investigation System:</strong> Fra "Did Someone Say Murder?" DLC (R. Talsorian Games)</p>
+<p><strong>Cyberpunk RED:</strong> Mike Pondsmith, R. Talsorian Games</p>
+
+<h3>Design Philosophy:</h3>
+<p>Dette modul er designet omkring tre principper:</p>
+<ol>
+    <li><strong>Choices Matter:</strong> Hver beslutning spillerne tager har consequences der rippler gennem campaign'en</li>
+    <li><strong>No Single Solution:</strong> Der er multiple paths til success (og failure). Spillerne skal finde deres egen vej.</li>
+    <li><strong>Emotional Investment:</strong> NPCs er ikke bare stat-blokke - de er mennesker med motivationer, fears, og relationships</li>
+</ol>
+
+<h3>Balancing Notes:</h3>
+<ul>
+    <li><strong>Combat Difficulty:</strong> Cleaner er designed som tough but not impossible. En crew af 4 level 4-5 characters kan håndtere ham hvis de er smarte.</li>
+    <li><strong>Investigation Difficulty:</strong> Complexity 50 betyder en crew skal løse 3-4 clues for at få nok information. Med Focus pools på 35-45, kan de typisk håndtere 4-5 Evidence Checks før de skal hvile.</li>
+    <li><strong>Time Pressure:</strong> 48-timer clocken er tight men manageable hvis spillerne prioriterer godt. De KAN nå det hele hvis de er effektive.</li>
+</ul>
+
+<h3>Customization Tips:</h3>
+<ul>
+    <li><strong>Øg difficulty:</strong> Reducer ticking clock til 36 timer, øg Cleaner til Solo 6, tilføj extra Obstacles</li>
+    <li><strong>Reducer difficulty:</strong> Øg ticking clock til 60 timer, reducer Complexity til 40, giv spillerne extra allies</li>
+    <li><strong>Different tone:</strong> Gør det mere action (flere combat scenes, mindre investigation) eller mere noir (mere social manipulation, færre fights)</li>
+</ul>
+
+<p style="text-align: center; margin-top: 40px; font-size: 1.2em; color: #d90429;">
+<strong>Velkommen til Night City, GM.<br>
+Lad spillerne forme deres egen historie.<br>
+Der er ingen rigtige svar - kun consequences.</strong>
+</p>
+
 </body>
 </html>
